@@ -1,0 +1,18 @@
+<div class="nav">
+  <div><h1>Wikinimous</h1></div>
+  <div>
+    <%= link_to edit_article_path(@article) do%>
+    <i class="icon fa fa-edit"></i>
+    <% end %>
+    <%= link_to article_path(@article), method: :delete do%>
+    <i class="icon fa fa-trash"></i>
+    <% end %>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h2 class="py-3 w-100 text-center"><%= @article.title%></h2>
+  <p><%= @article.content%></p>
+  <%= link_to "back", articles_path %>
+</div>
+
